@@ -34,27 +34,10 @@ body{
 }
 
 .cabecalho-interface {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 8vh;
-  right: 0;
-  background-color: #49736c;
-  width: 100%;
-  padding: 10px 0;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transform: translateY(-20px);
-  opacity: 0;
-  z-index: 999;
-}
-
-.cabecalho-interface.show {
+  width: 60%;
   display: flex;
-  transform: translateY(0);
-  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  opacity: 1;
 }
 
 .menu-hamburguer {
@@ -667,6 +650,22 @@ button:hover {
   }
   .cabecalho-interface{
     flex-direction: column;
+  }
+  
+  .nossos-servicos {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .nossos-servicos h2{
+    width: 70%;
+  }
+  .servicos-container{
+    width: 70%;
+  }
+  .informacao-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 }
 @media (max-width: 480px) {
