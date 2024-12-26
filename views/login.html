@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles/styleLogin.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav>
+            <a href="/"><img src="" alt="Logo Singular"></a>
+            <a href="" class="nav-contate">Contate-nos</a>
+        </nav>
+    </header>
+    <main class="login">
+        <section class="login-container">
+            <form action="/login" method="POST" class="login-container-form">
+                <div class="login-container-form-user">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="login-container-form-pass">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

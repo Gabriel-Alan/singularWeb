@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e1e1e1;
+    height: 100vh;
+}
+
+.cabecalho{
+    padding: 1% 2%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho nav{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-contate{
+    text-decoration: none;
+    background-color: #517D77;
+    padding: 1% 2%;
+    border-radius: 25px;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+}
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 60%;
+    /* background-color: blanchedalmond; */
+}
+
+.login-container-form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.login-container-form-user{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.login-container-form-user label{
+    color: #517D77;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+.login-container-form-user input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 1%;
+    background-color: #d9d9d9;
+}
+
+.login-container-form-pass{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.login-container-form-pass input{
+    width: 100%;
+    height: 40px;
+    border: 0px;
+    border-radius: 2px;
+    padding: 1%;
+    background-color: #d9d9d9;
+}
+
+.login-container-form-pass label{
+    color: #517D77;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.login-container-form button {
+    padding: 1% 4%;
+    background-color: #517D77;
+    font-size: 1.25rem;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-container-form button:hover {
+    letter-spacing: 2px;
+}
