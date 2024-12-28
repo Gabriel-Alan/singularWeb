@@ -27,18 +27,23 @@
             <div class="slides">
               <div class="slide">
                 <p>Relatório de cobranças em tempo real</p>
+                <img src="images/relatorio.jpg" alt="Relatório de cobranças em tempo real">
               </div>
               <div class="slide">
                 <p>Sistema próprio de localização de devedores</p>
+                <img src="images/sistema.jpg" alt="Sistema próprio de localização de devedores">
               </div>
               <div class="slide">
                 <p>Consultoria de gestão financeira</p>
+                <img src="images/consultoria.jpg" alt="Consultoria de gestão financeira">
               </div>
               <div class="slide">
                 <p>Equipe especializada</p>
+                <img src="images/equipe.jpg" alt="Equipe especializada">
               </div>
               <div class="slide">
                 <p>Resultados de maneira assertiva</p>
+                <img src="images/resultados.jpg" alt="Resultados de maneira assertiva">
               </div>
             </div>
           </div>
@@ -181,15 +186,15 @@
         </div>
         <div class="right-panel">
             <div class="icon-box">
-                <img src="extrajudicial-icon.png" alt="Cobrança Extrajudicial">
+                <img src="images/extra.png" alt="Cobrança Extrajudicial">
                 <p>COBRANÇA EXTRAJUDICIAL</p>
             </div>
             <div class="icon-box">
-                <img src="judicial-icon.png" alt="Cobrança Judicial">
+                <img src="images/jud.png" alt="Cobrança Judicial">
                 <p>COBRANÇA JUDICIAL</p>
             </div>
             <div class="icon-box">
-                <img src="bonus-icon.png" alt="Bônus Exclusivo">
+                <img src="images/bonus.png" alt="Bônus Exclusivo">
                 <p>BÔNUS EXCLUSIVO</p>
             </div>
         </div>
@@ -198,7 +203,7 @@
         <div class="form-container">
           <h2>FALE CONOSCO</h2>
           <p>Preencha o formulário e receba o contato do nosso time de especialistas.</p>
-          <form>
+          <form id="leadForm">
             <div class="input-group">
               <div>
                 <label for="nome">Nome:</label>
@@ -227,9 +232,14 @@
             </div>
             <button type="submit">ENVIAR</button>
           </form>
+          <div class="overlay" id="overlay"></div>
+          <div class="modal" id="modal">
+            <p>Formulário enviado com sucesso!</p>
+            <button id="closeModal">Fechar</button>
+          </div>
         </div>
         <div class="image-container">
-          <img src="sua-imagem.jpg" alt="Pessoa utilizando smartphone">
+          <img src="images/mulher-celular.jpg" alt="Pessoa utilizando smartphone">
         </div>
       </section>
       <section class="quem-somos">
@@ -283,8 +293,6 @@
       let rotationCount = 0; // Contador de rotações completas
       const maxRotations = 2; // Número máximo de rotações permitidas
 
-
-
       function goToNextSlide() {
         // Verifica se já atingiu o limite de rotações
         if (rotationCount >= maxRotations) {
@@ -314,8 +322,41 @@
 
       // Alterna a classe "open"
       servico.classList.toggle('open');
-    }
+      }
 
+      document.getElementById('leadForm').addEventListener('submit', async function (event) {
+      event.preventDefault(); // Impede o redirecionamento da página
+
+      // Capturar os dados do formulário
+      const formData = new FormData(event.target);
+      const data = Object.fromEntries(formData.entries());
+
+      // Enviar os dados para o Apps Script via POST
+      const url = 'https://script.google.com/macros/s/AKfycbxPhUtxoEabShxy_ll7dknfGt8LMIbWnygqzBRjNkWSkGPz5n8PMjECbtEEgOLeXKbFVQ/exec'; // Substitua pelo URL do Apps Script
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          body: new URLSearchParams(data),
+        });
+
+        if (response.ok) {
+          // Exibir o modal de sucesso
+          document.getElementById('modal').classList.add('active');
+          document.getElementById('overlay').classList.add('active');
+          event.target.reset(); // Limpar o formulário
+        } else {
+          alert('Erro ao enviar os dados. Tente novamente.');
+        }
+      } catch (error) {
+        alert('Erro ao enviar os dados: ' + error.message);
+      }
+    });
+
+    // Fechar o modal
+    document.getElementById('closeModal').addEventListener('click', function () {
+      document.getElementById('modal').classList.remove('active');
+      document.getElementById('overlay').classList.remove('active');
+    });
     </script>
 </body>
 </html>

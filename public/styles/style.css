@@ -83,6 +83,7 @@ body{
   justify-content: space-between;
   align-items: center;
   height: 70vh;
+  padding: 0% 8%;
 }
 
 .pagina-diferenciais h2 {
@@ -96,13 +97,14 @@ body{
 }
 
 /* Slider container */
-.slider-area{
+.slider-area {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 90%;
   width: 100%;
 }
+
 .slider {
   position: relative;
   overflow: hidden;
@@ -117,21 +119,34 @@ body{
 .slide {
   flex: 0 0 33.333%; /* Três itens por vez */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
   background-color: #517d77;
   border: 1px solid #ccc;
-  height: 350px;
+  height: 450px; /* Altura aumentada */
+  width: 250px; /* Largura reduzida */
   border-radius: 20px;
   box-sizing: border-box;
   margin: 20px;
 }
 
 .slide p {
-  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
   font-weight: bold;
+  color: #ffffff;
   margin: 0;
+  width: 90%;
+  height: 30%; /* Ajustado para caber melhor */
+}
+
+.slide img {
+  width: 100%;
+  height: 60%; /* Maior proporção para imagens */
+  border-radius: 0px 0px 20px 20px;
 }
 
 /* Remove bordas entre os slides */
@@ -363,30 +378,36 @@ body{
 }
 
 .icon-box img {
-  max-width: 50px;
+  width: 150px;
+  height: 150px;
   margin-bottom: 10px;
 }
 
 .icon-box p {
-  font-size: 14px;
+  font-size: 1.2rem;
   color: #333;
   font-weight: bold;
 }
 
 .fale-conosco {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #49736c; /* Verde */
-  padding: 40px;
-  gap: 20px;
+  justify-content: center; /* Garante que a altura ocupe toda a tela */
+  background-color: #49736c;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /* Container do formulário */
 .form-container {
-  flex: 1;
+  width: 50%;
+  max-width: 500px; /* Limita o tamanho máximo */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   color: white;
-  padding-right: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .form-container h2 {
@@ -402,6 +423,7 @@ body{
 
 /* Estilo do formulário */
 form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -447,13 +469,62 @@ button:hover {
 
 /* Container da imagem */
 .image-container {
-  flex: 1;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-container img {
   width: 100%;
+  max-width: 500px; /* Limita o tamanho máximo */
   height: auto;
+  border-radius: 25px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: white;
+  color: #395d56;
+  padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.modal.active {
+  display: block;
+}
+.modal button {
+  margin-top: 20px;
+  background-color: #49736c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal button:hover {
+  background-color: #395d56;
+}
+
+/* Fundo escuro atrás do modal */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.overlay.active {
+  display: block;
 }
 
 .quem-somos {
