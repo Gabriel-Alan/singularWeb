@@ -180,13 +180,11 @@ body{
 }
 
 .icon-container {
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
-  border-radius: 50%;
   margin-bottom: 10px;
   overflow: hidden;
 }
@@ -197,7 +195,7 @@ body{
 }
 
 .flex-item p {
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: bold;
   margin: 0;
 }
@@ -484,7 +482,7 @@ button:hover {
 
 /* Estilo do conteúdo textual */
 .quem-somos .conteudo {
-  width: 60%;
+  width: 50%;
 }
 
 .quem-somos .conteudo h2 {
@@ -570,7 +568,7 @@ button:hover {
     height: 20px;
   }
   .cabecalho-interface {
-    display: none;
+    
   }
 
   .menu-hamburguer {
@@ -592,6 +590,10 @@ button:hover {
   }
 }
 @media (max-width: 768px) {
+  .logo{
+    width: 15px;
+    height: 15px;
+  }
   .flex-item {
     flex: 0 1 calc(50% - 20px); /* 2 itens por linha em telas menores */
   }
@@ -644,12 +646,10 @@ button:hover {
   }
 
   .cabecalho {
-    flex-direction: column;
-    height: auto;
+    height: 60px;
     gap: 10px;
   }
   .cabecalho-interface{
-    flex-direction: column;
   }
   
   .nossos-servicos {
