@@ -392,7 +392,7 @@ body{
 .fale-conosco {
   display: flex;
   align-items: center;
-  justify-content: center; /* Garante que a altura ocupe toda a tela */
+  justify-content: space-evenly; /* Garante que a altura ocupe toda a tela */
   background-color: #49736c;
   padding: 20px;
   box-sizing: border-box;
@@ -476,8 +476,7 @@ button:hover {
 }
 
 .image-container img {
-  width: 100%;
-  max-width: 500px; /* Limita o tamanho máximo */
+  width: 80%; /* Limita o tamanho máximo */
   height: auto;
   border-radius: 25px;
 }
