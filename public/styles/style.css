@@ -123,19 +123,19 @@ body{
   justify-content: space-between;
   align-items: center;
   background-color: #517d77;
-  border: 1px solid #ccc;
-  height: 450px; /* Altura aumentada */
-  width: 250px; /* Largura reduzida */
+  height: 450px;
+  width: 250px;
   border-radius: 20px;
   box-sizing: border-box;
   margin: 20px;
+  padding: 1% 0% 0% 0%;
 }
 
 .slide p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #ffffff;
   margin: 0;
@@ -637,10 +637,15 @@ button:hover {
     width: 20px;
     height: 20px;
   }
-  .cabecalho-interface {
-    
+  .image-container img {
+    width: 90%; /* Limita o tamanho máximo */
   }
-
+  .slide {
+    height: 350px; /* Altura aumentada */
+  }
+  .slide p {
+    font-size: 1.4rem;
+  }
   .menu-hamburguer {
     display: block;
   }
@@ -719,9 +724,6 @@ button:hover {
     height: 60px;
     gap: 10px;
   }
-  .cabecalho-interface{
-  }
-  
   .nossos-servicos {
     flex-direction: column;
     gap: 40px;
@@ -736,6 +738,12 @@ button:hover {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+  }
+  .slide {
+    height: 300px; /* Altura aumentada */
+  }
+  .slide p {
+    font-size: 1.25rem;
   }
 }
 @media (max-width: 480px) {

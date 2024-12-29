@@ -9,18 +9,18 @@ const port = 5001;
 
 app.use(useragent.express());
 
-app.use((req, res, next) => {
-  const isMobilePhone = req.useragent.isMobile && !req.useragent.isTablet;
+// app.use((req, res, next) => {
+//   const isMobilePhone = req.useragent.isMobile && !req.useragent.isTablet;
 
-  if (isMobilePhone) {
-    res.status(403).send(`
-      <h1>Acesso Bloqueado</h1>
-      <p>O acesso à plataforma não está disponível para smartphones.</p>
-    `);
-  } else {
-    next();
-  }
-});
+//   if (isMobilePhone) {
+//     res.status(403).send(`
+//       <h1>Acesso Bloqueado</h1>
+//       <p>O acesso à plataforma não está disponível para smartphones.</p>
+//     `);
+//   } else {
+//     next();
+//   }
+// });
 
 // Configuração do express-session
 app.use(session({
