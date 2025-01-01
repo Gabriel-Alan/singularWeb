@@ -750,6 +750,9 @@ button:hover {
   .flex-item {
     flex: 0 1 100%; /* 1 item por linha em telas muito pequenas */
   }
+  .acesso{
+    display: none;
+  }
   .numero {
     width: 40px;
     height: 40px;
@@ -773,6 +776,30 @@ button:hover {
 
   .menu-hamburguer {
     font-size: 1.75rem;
+  }
+  .pagina-diferenciais{
+    display: none;
+  }
+  .topico span {
+    font-size: 1.25rem;
+  }
+  .left-panel {
+    width: 90%;
+  }
+  .left-panel h2{
+    width: 90%;
+  }
+  .form-container {
+    width: 90%;
+  }
+  .image-container img {
+    display: none;
+  }
+  .quem-somos .imagem img {
+    display: none;
+  }
+  .quem-somos .conteudo {
+    width: 90%;
   }
 }
 
