@@ -31,7 +31,7 @@ body{
   align-items: center;
 }
 
-.logo {
+.logos {
   width: 25px;
   height: 25px;
 }
@@ -590,15 +590,22 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 /* Estilo da seção da logo */
-.rodape .logo {
+.rodape{
   flex: 1;
+}
+
+.logo {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .rodape .logo p {
@@ -638,10 +645,6 @@ button:hover {
 
 /* Responsividade */
 @media (max-width: 1024px) {
-  .logo{
-    width: 20px;
-    height: 20px;
-  }
   .image-container img {
     width: 90%; /* Limita o tamanho máximo */
   }
@@ -670,10 +673,6 @@ button:hover {
   }
 }
 @media (max-width: 768px) {
-  .logo{
-    width: 15px;
-    height: 15px;
-  }
   .flex-item {
     flex: 0 1 calc(50% - 20px); /* 2 itens por linha em telas menores */
   }
@@ -709,6 +708,7 @@ button:hover {
     padding: 0 20px;
   }
   .rodape-container {
+    padding: 10px;
     flex-direction: column;
     text-align: center;
   }
@@ -716,6 +716,9 @@ button:hover {
   .rodape .logo,
   .rodape .informacoes {
     text-align: center;
+  }
+  .logo{
+    height: 100px;
   }
   .pagina-principal {
     height: 60vh;
@@ -728,6 +731,10 @@ button:hover {
   .cabecalho {
     height: 60px;
     gap: 10px;
+  }
+  .logos{
+    width: 20px;
+    height: 20px;
   }
   .nossos-servicos {
     flex-direction: column;
@@ -762,10 +769,6 @@ button:hover {
     width: 40px;
     height: 40px;
     font-size: 16px;
-  }
-  .logo {
-    width: 15px;
-    height: 15px;
   }
   .etapa p {
     font-size: 12px; /* Texto menor para caber em telas muito pequenas */
@@ -811,6 +814,9 @@ button:hover {
   }
   .quem-somos .conteudo {
     width: 90%;
+  }
+  .informacoes{
+    font-size: 0.75rem;
   }
 }
 
