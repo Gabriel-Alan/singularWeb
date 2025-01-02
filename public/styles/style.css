@@ -18,7 +18,10 @@ body{
   align-items: center;
   background-color: #D9D9D9;
 }
-
+.logo-principal{
+  width: 150px;
+  height: 75px;
+}
 .link-logo {
   padding: 1%;
   background-color: black;
@@ -29,8 +32,8 @@ body{
 }
 
 .logo {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .cabecalho-interface {
@@ -54,6 +57,8 @@ body{
 
 .logo-empresa{
   width: 30%;
+  padding: 1%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -758,7 +763,10 @@ button:hover {
     height: 40px;
     font-size: 16px;
   }
-
+  .logo {
+    width: 15px;
+    height: 15px;
+  }
   .etapa p {
     font-size: 12px; /* Texto menor para caber em telas muito pequenas */
   }
@@ -773,7 +781,10 @@ button:hover {
   .cabecalho-interface a {
     font-size: 0.9rem;
   }
-
+  .logo-principal{
+    width: 80px;
+    height: 40px;
+  }
   .menu-hamburguer {
     font-size: 1.75rem;
   }
