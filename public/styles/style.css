@@ -43,18 +43,6 @@ body{
   align-items: center;
 }
 
-.menu-hamburguer {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-
-.menu-hamburguer.active {
-  transform: rotate(90deg);
-}
-
 .logo-empresa{
   width: 30%;
   padding: 1%;
@@ -64,10 +52,15 @@ body{
   align-items: center;
 }
 
-.cabecalho-interface a{
+.cabecalho-link{
   text-decoration: none;
   color: black;
   font-size: 1rem;
+  transition: 0.5s;
+}
+.cabecalho-link:hover{
+  text-decoration: underline;
+  letter-spacing: 2px;
 }
 
 .pagina-principal{
@@ -383,13 +376,13 @@ body{
 }
 
 .icon-box img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   margin-bottom: 10px;
 }
 
 .icon-box p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #333;
   font-weight: bold;
 }
