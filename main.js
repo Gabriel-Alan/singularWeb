@@ -3,7 +3,7 @@ const slideCount = document.querySelectorAll('.slide').length;
 const itemsPerView = 3; // Quantos itens aparecem por vez
 let currentIndex = 0;
 let rotationCount = 0; // Contador de rotações completas
-const maxRotations = 2; // Número máximo de rotações permitidas
+const maxRotations = 4; // Número máximo de rotações permitidas
 
 function goToNextSlide() {
   // Verifica se já atingiu o limite de rotações

@@ -12,19 +12,55 @@
 </head>
 <body>
     <header class="cabecalho">
-        <section class="logo-empresa">
-          <a href=""><img src="images/logo.png" alt="Logo da Singular" class="logo-principal"></a>
-        </section>
-        <section class="cabecalho-interface">
-          <a class="link-logo" href="https://www.instagram.com/cobrancasingular/"><img class="logos" src="/images/instagram.png" alt="Logo Instagram"></a>
-          <a class="link-logo" href="https://wa.link/67cb0n"><img class="logos" src="/images/whatsapp.png" alt="Logo Whatsapp"></a>
-          <a class="cabecalho-link" href="https://wa.link/67cb0n">Fale Conosco</a>
-          <!-- <a class="cabecalho-link" href="/login" class="acesso">Acesso</a> -->
-        </section>
+      <section class="cabecalho-sec">
+        <div class="cabecalho-frase">
+          Seu condomínio merece uma combrança singular.
+        </div>
+        <div class="cabecalho-interface">
+          <a href="" class="cabecalho-link" >financeiro@cobrancasingular.com.br</a>
+          <div class="cabecalho-link-redes">
+            <a class="link-logo" href="https://www.instagram.com/cobrancasingular/"><img class="logos" src="/images/instagram.png" alt="Logo Instagram"></a>
+            <a class="link-logo" href="https://wa.link/67cb0n"><img class="logos" src="/images/whatsapp.png" alt="Logo Whatsapp"></a>
+          </div>
+        </div>
+      </section>
     </header>
     <main>
-      <section class="pagina-principal"></section>
-      <section class="pagina-diferenciais">
+      <section class="pagina-principal">
+        <nav>
+          <a href="">Inicio</a>
+          <a href="#quemsomos">Quem Somos</a>
+          <a href="#metodologia">Metodologia</a>
+          <a href="" ><img src="images/logo2.png" alt="Logo Singular" class="logo-singular" ></a>
+          <a href="#nossosservicos">Serviços</a>
+          <a href="#info">Cobrança</a>
+          <a href="#faleconosco">Fale Conosco</a>
+          <!-- <a href=""></a>
+          <a href=""></a> -->
+        </nav>
+      </section>
+      <section id="quemsomos" class="quem-somos">
+        <div class="quem-somos-container">
+          <div class="conteudo">
+            <h2>QUEM SOMOS?</h2>
+            <p>
+              Após 8 anos de experiência na advocacia condominial especializada, administração condominial e investimentos, 
+              conhecemos a realidade e as dificuldades da gestão de um condomínio e sabemos da importância do 
+              <span>planejamento</span>, <span>transparência</span> e <span>agilidade</span> para o dia a dia condominial.
+            </p>
+            <p>
+              Assim surgiu a <span>SINGULAR</span>, com a proposta de unir <span>EXPERTISE TÉCNICA</span>, <span>INOVAÇÃO</span>, 
+              <span>TRANSPARÊNCIA</span>, <span>AGILIDADE</span> e trazer não apenas diminuição/erradicação da inadimplência, mas, também, 
+              auxiliar o(a)s síndico(a)s em boas práticas de Governança Condominial com foco no melhor aproveitamento e utilização dos recursos, 
+              gerando valorização patrimonial para os condomínios.
+            </p>
+            <p>
+              Somos a agilidade de uma cobrança tecnológica aliada à expertise humana de quem entende de condomínios.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="pagina-diferenciais">
         <h2>NOSSOS DIFERENCIAIS</h2>
         <div class="slider-area">
           <div class="slider">
@@ -52,8 +88,8 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="metodologia">
+      </section> -->
+      <section id="metodologia" class="metodologia">
           <h2>NOSSA METODOLOGIA</h2>
           <div class="flex-container">
             <div class="flex-item">
@@ -94,7 +130,7 @@
             </div>
           </div>
       </section>
-      <section class="nossos-servicos">
+      <section id="nossosservicos" class="nossos-servicos">
         <h2>NOSSOS SERVIÇOS</h2>
       
         <!-- Div Pai para todos os serviços -->
@@ -177,28 +213,7 @@
           </div>
         </div>
       </section>
-      <section class="cronograma">
-        <h2>CRONOGRAMA</h2>
-        <div class="cronograma-container">
-          <div class="etapa">
-            <div class="numero">1</div>
-            <p>Análise da inadimplência e perfil dos devedores</p>
-          </div>
-          <div class="etapa">
-            <div class="numero">2</div>
-            <p>Início das cobranças extrajudiciais e judiciais</p>
-          </div>
-          <div class="etapa">
-            <div class="numero">3</div>
-            <p>Elaboração e disponibilização dos relatórios</p>
-          </div>
-          <div class="etapa">
-            <div class="numero">4</div>
-            <p>Disponibilização relatório periódico/anual</p>
-          </div>
-        </div>
-      </section>
-      <section class="informacao-container">
+      <section id="info" class="informacao-container">
         <div class="left-panel">
             <h2>COBRANÇA CONDOMINIAL</h2>
             <p>
@@ -220,7 +235,7 @@
             </div>
         </div>
       </section>
-      <section class="fale-conosco">
+      <section id="faleconosco" class="fale-conosco">
         <div class="form-container">
           <h2>FALE CONOSCO</h2>
           <p>Preencha o formulário e receba o contato do nosso time de especialistas.</p>
@@ -257,33 +272,6 @@
           <div class="modal" id="modal">
             <p>Formulário enviado com sucesso!</p>
             <button id="closeModal">Fechar</button>
-          </div>
-        </div>
-        <div class="image-container">
-          <img src="images/mulher-celular.jpg" alt="Pessoa utilizando smartphone">
-        </div>
-      </section>
-      <section class="quem-somos">
-        <div class="quem-somos-container">
-          <div class="imagem">
-            <img src="sua-imagem.jpg" alt="Pessoa utilizando smartphone">
-          </div>
-          <div class="conteudo">
-            <h2>QUEM SOMOS?</h2>
-            <p>
-              Após 8 anos de experiência na advocacia condominial especializada, administração condominial e investimentos, 
-              conhecemos a realidade e as dificuldades da gestão de um condomínio e sabemos da importância do 
-              <span>planejamento</span>, <span>transparência</span> e <span>agilidade</span> para o dia a dia condominial.
-            </p>
-            <p>
-              Assim surgiu a <span>SINGULAR</span>, com a proposta de unir <span>EXPERTISE TÉCNICA</span>, <span>INOVAÇÃO</span>, 
-              <span>TRANSPARÊNCIA</span>, <span>AGILIDADE</span> e trazer não apenas diminuição/erradicação da inadimplência, mas, também, 
-              auxiliar o(a)s síndico(a)s em boas práticas de Governança Condominial com foco no melhor aproveitamento e utilização dos recursos, 
-              gerando valorização patrimonial para os condomínios.
-            </p>
-            <p>
-              Somos a agilidade de uma cobrança tecnológica aliada à expertise humana de quem entende de condomínios.
-            </p>
           </div>
         </div>
       </section>

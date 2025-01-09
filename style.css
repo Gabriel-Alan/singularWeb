@@ -11,38 +11,47 @@ body{
 }
 /* Cabeçalho */
 .cabecalho {
-  padding: 1%;
-  height: 8vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #D9D9D9;
-}
-.logo-principal{
-  width: 150px;
-  height: 75px;
-}
-.link-logo {
-  padding: 1%;
-  background-color: black;
-  border-radius: 50%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #00796b;
+  border: none;
+}
+
+.cabecalho-sec{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+
+.link-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 2%;
 }
 
 .logos {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
-
+.cabecalho-frase{
+  color: white;
+  font-size: 1rem;
+}
 .cabecalho-interface {
-  width: 60%;
+  width: 40%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-
+.cabecalho-link-redes{
+  display: flex;
+  gap: 15px
+}
 .logo-empresa{
   width: 30%;
   padding: 1%;
@@ -54,26 +63,97 @@ body{
 
 .cabecalho-link{
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 1rem;
   transition: 0.5s;
 }
 .cabecalho-link:hover{
-  text-decoration: underline;
-  letter-spacing: 2px;
+  color: black;
+
 }
 
+
+
 .pagina-principal{
-  background-color: #517d77;
-  height: 80vh;
+  height: 95vh;
   width: 100%;
-  background-image: url(../images/backgnd1.jpg);
+  background-image: url(../images/backgnd1.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.pagina-principal nav{
+  width: 80%;
+  background-color: rgba(85, 85, 85, 0.377);
+  padding: 1%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid #00796b;
+}
+.logo-singular{
+  height: 100px;
+}
+.pagina-principal nav a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.pagina-principal nav a:hover{
+  color: black;
 }
 
-.pagina-diferenciais {
+
+.quem-somos {
+  background-color: #f5f5f5;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  background-image: url('images/back2gnd.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.quem-somos-container {
+  display: flex;
+  gap: 30px;
+  justify-content: end;
+  align-items: center;
+  padding: 2%;
+}
+
+/* Estilo do conteúdo textual */
+.quem-somos .conteudo {
+  width: 40%;
+}
+
+.quem-somos .conteudo h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: whitesmoke;
+  margin-bottom: 20px;
+}
+
+.quem-somos .conteudo p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.quem-somos .conteudo span {
+  font-weight: bold;
+  color: #00796b; /* Cor verde para destaque */
+}
+
+/* .pagina-diferenciais {
   text-align: center;
   background-color: #e6e6e6;
   display: flex;
@@ -94,7 +174,6 @@ body{
   align-items: center;
 }
 
-/* Slider container */
 .slider-area {
   display: flex;
   justify-content: center;
@@ -115,7 +194,7 @@ body{
 }
 
 .slide {
-  flex: 0 0 33.333%; /* Três itens por vez */
+  flex: 0 0 33.333%; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -138,19 +217,20 @@ body{
   color: #ffffff;
   margin: 0;
   width: 90%;
-  height: 30%; /* Ajustado para caber melhor */
+  height: 30%;  Ajustado para caber melhor 
 }
 
 .slide img {
   width: 100%;
-  height: 60%; /* Maior proporção para imagens */
+  height: 60%;
   border-radius: 0px 0px 20px 20px;
 }
 
-/* Remove bordas entre os slides */
 .slide:not(:last-child) {
   border-right: none;
-}
+} */
+
+
 .metodologia {
   text-align: center;
   padding: 2% 15%;
@@ -190,8 +270,12 @@ body{
   flex: 0 1 calc(33.333% - 20px); /* 3 itens por linha com gap de 20px */
   box-sizing: border-box;
   height: 40%;
+  transition: 0.7s;
 }
-
+.flex-item:hover{
+  border: 1px solid #a3a3a3;
+  background-color: #395d56;
+}
 .icon-container {
   width: 150px;
   height: 150px;
@@ -212,6 +296,9 @@ body{
   font-weight: bold;
   margin: 0;
 }
+
+
+
 
 .nossos-servicos {
   background-color: #49736c; /* Cor de fundo */
@@ -267,62 +354,6 @@ body{
 
 .servico.open .icon {
   transform: rotate(45deg); /* Altera o "+" para "x" ao expandir */
-}
-
-.cronograma {
-  background-color: #e9ecef; /* Fundo cinza claro */
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2% 2%;
-  border-radius: 8px;
-  text-align: center;
-  max-width: 90%;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 60px;
-}
-
-.cronograma h2 {
-  font-size: 2.25rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.cronograma-container {
-  display: flex;
-  justify-content: space-between; /* Espaçamento igual entre as etapas */
-  align-items: center;
-  gap: 20px;
-}
-
-.etapa {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex: 1; /* Faz com que todas as etapas tenham tamanhos iguais */
-}
-
-.numero {
-  width: 50px;
-  height: 50px;
-  background-color: #49736c; /* Cor verde */
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.etapa p {
-  font-size: 14px;
-  color: #333;
-  max-width: 200px; /* Para limitar o texto */
 }
 
 
@@ -399,10 +430,9 @@ body{
 /* Container do formulário */
 .form-container {
   width: 50%;
-  max-width: 500px; /* Limita o tamanho máximo */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   color: white;
   padding: 20px;
   box-sizing: border-box;
@@ -465,20 +495,6 @@ button:hover {
   color: white;
 }
 
-/* Container da imagem */
-.image-container {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-container img {
-  width: 80%; /* Limita o tamanho máximo */
-  height: auto;
-  border-radius: 25px;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -524,54 +540,7 @@ button:hover {
   display: block;
 }
 
-.quem-somos {
-  background-color: #f5f5f5;
-  padding: 50px 20px;
-  display: flex;
-  justify-content: center;
-}
 
-.quem-somos-container {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Estilo da imagem */
-.quem-somos .imagem img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo do conteúdo textual */
-.quem-somos .conteudo {
-  width: 50%;
-}
-
-.quem-somos .conteudo h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.quem-somos .conteudo p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 15px;
-  text-align: justify;
-}
-
-.quem-somos .conteudo span {
-  font-weight: bold;
-  color: #00796b; /* Cor verde para destaque */
-}
 .rodape {
   background-color: #4d4d4d;
   color: #fff;
