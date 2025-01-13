@@ -9,6 +9,17 @@
 body{
   background-color: #D9D9D9;
 }
+.animated-element {
+  opacity: 0;
+  transform: translateY(50px); /* Começa levemente deslocado */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.animated-element.visible {
+  opacity: 1;
+  transform: translateY(0); /* Retorna à posição original */
+}
+
 /* Cabeçalho */
 .cabecalho {
   height: auto;
@@ -43,7 +54,7 @@ body{
   font-size: 1rem;
 }
 .cabecalho-interface {
-  width: 40%;
+  width: 45%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -51,14 +62,6 @@ body{
 .cabecalho-link-redes{
   display: flex;
   gap: 15px
-}
-.logo-empresa{
-  width: 30%;
-  padding: 1%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .cabecalho-link{
@@ -71,13 +74,11 @@ body{
   color: black;
 
 }
-
-
-
+/* Pagina Principal */
 .pagina-principal{
   height: 95vh;
   width: 100%;
-  background-image: url(../images/backgnd1.png);
+  background-image: url(../images/backgnd3.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -105,7 +106,7 @@ body{
   transition: 0.5s;
 }
 .pagina-principal nav a:hover{
-  color: black;
+  font-size: 1.5rem;
 }
 
 
@@ -150,86 +151,9 @@ body{
 
 .quem-somos .conteudo span {
   font-weight: bold;
-  color: #00796b; /* Cor verde para destaque */
+  color: white; /* Cor verde para destaque */
+  text-decoration: underline;
 }
-
-/* .pagina-diferenciais {
-  text-align: center;
-  background-color: #e6e6e6;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 70vh;
-  padding: 0% 8%;
-}
-
-.pagina-diferenciais h2 {
-  display: flex;
-  font-size: 2.25rem;
-  height: 15%;
-  font-weight: 800;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.slider-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90%;
-  width: 100%;
-}
-
-.slider {
-  position: relative;
-  overflow: hidden;
-  width: 80%;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  flex: 0 0 33.333%; 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #517d77;
-  height: 450px;
-  width: 250px;
-  border-radius: 20px;
-  box-sizing: border-box;
-  margin: 20px;
-  padding: 1% 0% 0% 0%;
-}
-
-.slide p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #ffffff;
-  margin: 0;
-  width: 90%;
-  height: 30%;  Ajustado para caber melhor 
-}
-
-.slide img {
-  width: 100%;
-  height: 60%;
-  border-radius: 0px 0px 20px 20px;
-}
-
-.slide:not(:last-child) {
-  border-right: none;
-} */
-
 
 .metodologia {
   text-align: center;
@@ -249,40 +173,67 @@ body{
 }
 
 .flex-container {
-  height: 80%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between; /* Espaço entre os itens */
-  gap: 20px; /* Espaçamento entre as linhas */
+  flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
+  justify-content: space-between; /* Espaço uniforme entre os itens */
+  gap: 20px; /* Espaçamento entre os itens */
 }
 
 .flex-item {
+  flex: 0 1 calc(33.333% - 20px); /* 3 itens por linha, com espaço de 20px */
+  box-sizing: border-box; /* Inclui padding e border no tamanho total */
+  perspective: 1000px; /* Habilita a perspectiva para a rotação 3D */
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Define a altura do card */
+  transform-style: preserve-3d; /* Permite rotação 3D */
+  transition: transform 0.8s ease-in-out;
+}
+
+.flex-item:hover .card {
+  transform: rotateY(180deg); /* Gira o card ao passar o mouse */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta o lado inverso */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  background-color: #a3a3a3;
-  padding: 15px;
+  justify-content: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+  background-color: #a3a3a3;
   color: #ffffff;
-  flex: 0 1 calc(33.333% - 20px); /* 3 itens por linha com gap de 20px */
-  box-sizing: border-box;
-  height: 40%;
-  transition: 0.7s;
 }
-.flex-item:hover{
-  border: 1px solid #a3a3a3;
+
+.card-back {
   background-color: #395d56;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
+.card-back p{
+  width: 80%;
+}
+
 .icon-container {
   width: 150px;
   height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
   overflow: hidden;
 }
 
@@ -606,7 +557,34 @@ button:hover {
 }
 
 /* Responsividade */
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
+  .cabecalho-sec{
+    width: 85%;
+  }
+  .cabecalho-frase{
+    font-size: 0.75rem;
+  }
+  .cabecalho-link{
+    font-size: 0.75rem;
+  }
+
+  .pagina-principal nav a{
+    font-size: 1rem;
+  }
+  .pagina-principal nav{
+    width: 90%;
+    background-color: rgba(85, 85, 85, 0.377);
+    padding: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid #00796b;
+  }
+  .logo-singular{
+    height: 75px;
+  }
+
+
   .image-container img {
     width: 90%; /* Limita o tamanho máximo */
   }
@@ -616,14 +594,6 @@ button:hover {
   .slide p {
     font-size: 1.4rem;
   }
-  .menu-hamburguer {
-    display: block;
-  }
-
-  .pagina-diferenciais h2 {
-    font-size: 1.75rem;
-  }
-
   .flex-item {
     flex: 0 1 calc(50% - 20px); /* Dois itens por linha */
   }

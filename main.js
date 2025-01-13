@@ -69,3 +69,28 @@ document.getElementById('closeModal').addEventListener('click', function () {
 document.getElementById('modal').classList.remove('active');
 document.getElementById('overlay').classList.remove('active');
 });
+
+// Função para verificar se um elemento está visível na janela
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top <= window.innerHeight &&
+    rect.bottom >= 0
+  );
+}
+
+// Adiciona a classe "visible" aos elementos visíveis
+function handleScroll() {
+  const elements = document.querySelectorAll('.animated-element');
+  elements.forEach((el) => {
+    if (isElementInViewport(el)) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+// Adiciona o evento de scroll
+window.addEventListener('scroll', handleScroll);
+
+// Executa a função ao carregar a página para animações iniciais
+window.addEventListener('load', handleScroll);
