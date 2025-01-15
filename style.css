@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 *{
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
+  font-family: "Open Sans", serif;
+  font-weight: 400;
 }
 body{
   background-color: #D9D9D9;
@@ -101,7 +101,7 @@ body{
 .pagina-principal nav a{
   color: white;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 500;
   transition: 0.5s;
 }
@@ -152,17 +152,16 @@ body{
 .quem-somos .conteudo span {
   font-weight: bold;
   color: white; /* Cor verde para destaque */
-  text-decoration: underline;
 }
 
-.metodologia {
+.cobran {
   text-align: center;
   padding: 2% 15%;
   background-color: #e6e6e6;
   height: 70vh;
 }
 
-.metodologia h2 {
+.cobran h2 {
   display: flex;
   font-size: 2.25rem;
   height: 15%;
@@ -175,8 +174,10 @@ body{
 .flex-container {
   display: flex;
   flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
-  justify-content: space-between; /* Espaço uniforme entre os itens */
-  gap: 20px; /* Espaçamento entre os itens */
+  justify-content: space-between;
+  align-items: center; /* Espaço uniforme entre os itens */
+  gap: 20px;
+  height: 80%; /* Espaçamento entre os itens */
 }
 
 .flex-item {
