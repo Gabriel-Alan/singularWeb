@@ -583,8 +583,12 @@ button:hover {
   .logo-singular{
     height: 75px;
   }
-
-
+  .cobran {
+    height: auto;
+  }
+  .icon-container img{
+    width: 120px;
+  }
   .image-container img {
     width: 90%; /* Limita o tamanho máximo */
   }
@@ -662,7 +666,9 @@ button:hover {
   .flex-item {
     flex: 0 1 calc(100% - 20px); /* Um item por linha */
   }
-
+  .cobran {
+    height: auto;
+  }
   .cabecalho {
     height: 60px;
     gap: 10px;
